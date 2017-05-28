@@ -1,5 +1,5 @@
 from flask import Flask,render_template,url_for,request,session,redirect,send_file
-
+import os
 
 app = Flask(__name__)
 
@@ -22,4 +22,4 @@ def project():
 def resume():
 	return send_file('static/files/Niranjan Addanki Resume.pdf')
 
-app.run()
+app.run(host='0.0.0.0')
