@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>
+Niranjan Home Page
+</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css')}}">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/my.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='font-awesome/css/font-awesome.css')}}">
+</head>
+   
+<nav class="navbar navbar-default navbar-static-top">
+
+  <div class="col-sm-6 col-md-6 col-xs-6">
+
+  <div class="thumbnail" style="border:none; background:white;">
+
+   <div class="col-sm-4 col-md-4 col-xs-14 image-container">
+  <a href="https://www.google.com/#q=Niranjan+Addanki">
+  <img src="/static/img/niranjan.jpg" class="rounded float-left img-fluid img-thumbnail" width="75" height="50" > 
+  </a>
+
+  </div>
+              <div class="col-sm-4 col-md-8 col-xs-12">  
+                <h3 >Niranjan Addanki</h3>
+                <h6>Computer Science Graduate Student @ SUNY POLY </h6>
+                <address> <a href="mailto:addankn@sunyit.edu">addankn@sunyit.edu</a> </address>
+              </div>
+   </div>
+
+ </div>
+
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header col-sm-4 col-md-6 col-xs-12" >
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse col-sm-4 col-md-6 col-xs-12" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        {%if home %}
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        {% else %}
+        <li><a href=" {{ url_for('index')}}">Home</a></li>  
+        {% endif %}       
+        {%if blog %}
+        <li class="active"><a href="#">Blog <span class="sr-only">(current)</span></a></li>
+        {% else %}
+        <li><a href=" {{ url_for('blog')}}">Blog</a></li>  
+        {% endif %}   
+        {%if project %}
+        <li class="active"><a href="#">Project <span class="sr-only">(current)</span></a></li>
+        {% else %}
+        <li><a href=" {{ url_for('project')}}">Project</a></li>  
+        {% endif %}  
+        <li><a href="static/files/Niranjan Addanki Resume.pdf">Resume</a></li>                    
+      </ul>
+
+<!--
+<div class="col-sm-4 col-md-6 col-xs-14 image-container">
+
+<div class="thumbnail" >
+<a href="https://www.sunypoly.edu">
+  <img src="src/img/niranjan.jpg" class="rounded float-left img-fluid img-thumbnail" width="75" height="50" > 
+</a>
+</div>
+</div>
+-->
+</div><!-- /.navbar-collapse -->
+
+</nav> 
+
+
+<div class="container"> 
+<body class="container span8 over" >
+
+
+	{% block content %} {% endblock %}
+
+
+</body>
+</div><!-- /.container-fluid -->    
+
+
+<nav class="navbar navbar-inner  footer container span8">
+    <p class="muted credit"><center> 
+    you can find me at 
+      <ul class="nav nav-pills nav-justified">
+        
+        <li role="presentation"><a class="fa fa-linkedin fa-2x" aria-hidden="false" href="https://www.linkedin.com/in/niranjan-addanki"></a></li>
+        <li role="presentation"><a class="fa fa-quora fa-2x" aria-hidden="false" href="https://www.quora.com/profile/Niranjan-Addanki-1"></a></li>
+        <li role="presentation"><a class="fa fa-github fa-2x" aria-hidden="false" href="https://github.com/Nir0303"></a></li>
+        <li role="presentation"><a class="fa fa-bitbucket fa-2x" aria-hidden="false" href="https://bitbucket.org/Niran0303/"></a></li>
+      </ul>
+    </center></p>
+ </nav>
+<script src="{{url_for('static',filename='bootstrap/js/bootstrap.min.js')}}"></script>
+
+</html>
