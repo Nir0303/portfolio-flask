@@ -22,4 +22,4 @@ def project():
 def resume():
 	return send_file('static/files/Niranjan Addanki Resume.pdf')
 
-app.run(host='0.0.0.0')
+app.run()
