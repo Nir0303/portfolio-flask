@@ -61,7 +61,8 @@ Niranjan Home Page
         {% else %}
         <li><a href=" {{ url_for('project')}}">Project</a></li>  
         {% endif %}  
-        <li><a href="static/files/Niranjan Addanki Resume.pdf">Resume</a></li>                    
+        <!--<li><a href="static/files/Niranjan Addanki Resume.pdf">Resume</a></li>-->                    
+        <li><a href=" {{ url_for('resume') }} ">Resume</a></li>                    
       </ul>
 
 <!--
@@ -92,7 +93,7 @@ Niranjan Home Page
 
 <nav class="navbar navbar-inner  footer container span8">
     <p class="muted credit"><center> 
-    you can find me at 
+    Powered by Flask 
       <ul class="nav nav-pills nav-justified">
         
         <li role="presentation"><a class="fa fa-linkedin fa-2x" aria-hidden="false" href="https://www.linkedin.com/in/niranjan-addanki"></a></li>
