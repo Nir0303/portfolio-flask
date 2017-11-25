@@ -10,7 +10,7 @@ Niranjan Home Page
     <link rel="stylesheet" href="{{ url_for('static',filename='font-awesome/css/font-awesome.css')}}">
 </head>
    
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default ">
 
   <div class="col-sm-6 col-md-6 col-xs-6">
 
@@ -57,12 +57,12 @@ Niranjan Home Page
         <li><a href=" {{ url_for('blog')}}">Blog</a></li>  
         {% endif %}   
         {%if project %}
-        <li class="active"><a href="#">Project <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="#">Projects <span class="sr-only">(current)</span></a></li>
         {% else %}
-        <li><a href=" {{ url_for('project')}}">Project</a></li>  
+        <li><a href=" {{ url_for('project')}}">Projects</a></li>
         {% endif %}  
         <!--<li><a href="static/files/Niranjan Addanki Resume.pdf">Resume</a></li>-->                    
-        <li><a href=" {{ url_for('resume') }} ">Resume</a></li>                    
+        <li><a href=" {{ url_for('resume') }} ">CV</a></li>
       </ul>
 
 <!--
@@ -81,7 +81,7 @@ Niranjan Home Page
 
 
 <div class="container"> 
-<body class="container span8 over" >
+<body class="container span12 over" >
 
 
 	{% block content %} {% endblock %}
@@ -91,7 +91,7 @@ Niranjan Home Page
 </div><!-- /.container-fluid -->    
 
 
-<nav class="navbar navbar-inner  footer container span8">
+<nav class="navbar navbar-inner footer container span12">
 
       <ul class="nav nav-pills nav-justified">
         
@@ -101,7 +101,6 @@ Niranjan Home Page
         <li role="presentation"><a class="fa fa-bitbucket fa-2x" aria-hidden="false" href="https://bitbucket.org/Niran0303/"></a></li>
           <li role="presentation"><a class="fa fa-book fa-2x" aria-hidden="false" href="https://bitbucket.org/Niran0303/"></a></li>
       </ul>
-    </p>
  </nav>
 <script src="{{url_for('static',filename='bootstrap/js/bootstrap.min.js')}}"></script>
 

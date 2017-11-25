@@ -13,8 +13,6 @@ def parse():
 
 
 @app.route('/')
-@app.route('/main')
-@app.route('/index')
 def index():
     return render_template('index.html', home=True)
 
